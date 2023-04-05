@@ -16,6 +16,10 @@ export default defineConfig({
 				find: "@components",
 				replacement: path.resolve(__dirname, "src/components/share"),
 			},
+			{
+				find: "@styled",
+				replacement: path.resolve(__dirname, "src/styles/components"),
+			},
 		],
 	},
 });
