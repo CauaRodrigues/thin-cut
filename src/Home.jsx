@@ -1,7 +1,15 @@
+import React from "react";
+
+import TopInfo from "@section/TopInfo";
+import Header from "@section/Header";
+import Banner from "@section/Banner";
+
 export default function Home() {
 	return (
-		<div className="App">
-			<h1>Thin Cut</h1>
-		</div>
+		<>
+			<TopInfo />
+			<Header />
+			<Banner />
+		</>
 	);
 }
