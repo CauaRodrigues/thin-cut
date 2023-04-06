@@ -13,7 +13,6 @@ export const theme = {
 			asap: "'Asap', sans-serif",
 			poppins: "'Poppins', sans-serif",
 		},
-		fs: {},
 		fw: {
 			xth: 200,
 			th: 300,

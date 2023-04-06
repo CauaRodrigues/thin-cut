@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Icon = styled.img`
-	max-width: ${({ size }) => size}px;
-	width: ${({ size }) => size}px;
-	height: ${({ size }) => size}px;
+	max-width: ${(props) => props.sizes}px;
+	width: ${(props) => props.sizes}px;
+	height: ${(props) => props.sizes}px;
 `;
