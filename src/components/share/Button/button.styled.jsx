@@ -9,7 +9,7 @@ export const Button = styled.button`
 	transition: all 0.4s;
 
 	color: ${({ theme }) => theme.colors.light};
-	font-size: min(0.9rem, 4vw);
+	font-size: min(0.9rem, 5vw);
 	font-weight: ${({ theme }) => theme.fonts.fw.md};
 
 	&:hover {

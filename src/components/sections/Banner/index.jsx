@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "@section/Header";
 import { Button } from "@components/Button";
 
 import * as S from "./banner.styled";
 
 export default function Banner() {
+	const [image, setImage] = useState("banner1");
+	const imagesList = ["banner1", "banner2", "banner3", "banner4", "banner5"];
+
 	return (
-		<S.BannerContainer>
+		<S.BannerContainer bgImage={image}>
 			<Header />
 
 			<section className="content-text">
@@ -23,7 +26,15 @@ export default function Banner() {
 				<Button title="Fazer um Agendamento" />
 			</section>
 
-			<S.Points></S.Points>
+			<S.Points>
+				{imagesList.map((bg, index) => (
+					<S.Point
+						onClick={() => setImage(bg)}
+						key={index}
+						active={bg === image}
+					/>
+				))}
+			</S.Points>
 		</S.BannerContainer>
 	);
 }
