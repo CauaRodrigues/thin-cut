@@ -5,6 +5,10 @@ export const Header = styled.header`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	@media (max-width: 1000px) {
+		justify-content: space-between;
+	}
 `;
 
 export const LogoBox = styled.figure`
@@ -37,6 +41,10 @@ export const NavBox = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	gap: 0.8rem;
+
+	@media (max-width: 1000px) {
+		width: 50%;
+	}
 
 	a {
 		color: ${({ theme }) => theme.colors.light};

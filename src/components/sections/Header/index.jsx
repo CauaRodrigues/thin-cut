@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./header.styled";
 import { Button } from "@components/Button";
+import MediaQuery from "react-responsive";
 
 export default function Header() {
 	return (
@@ -14,15 +15,17 @@ export default function Header() {
 				</figcaption>
 			</S.LogoBox>
 
-			<S.NavBox>
-				<a href="#about">Sobre</a>
-				<a href="#services">Serviços</a>
-				<a href="#team">time</a>
-				<a href="#gallery">Galeria</a>
-				<a href="#contact">Contato</a>
-			</S.NavBox>
+			<MediaQuery minWidth={700}>
+				<S.NavBox>
+					<a href="#about">Sobre</a>
+					<a href="#services">Serviços</a>
+					<a href="#team">time</a>
+					<a href="#gallery">Galeria</a>
+					<a href="#contact">Contato</a>
+				</S.NavBox>
 
-			<Button title="Agendar Corte" />
+				<Button title="Agendar Corte" />
+			</MediaQuery>
 		</S.Header>
 	);
 }
