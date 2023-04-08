@@ -31,4 +31,8 @@ export const GlobalStyles = createGlobalStyle`
     display: block;
     max-width: 100%;
   }
+
+  #text-primary {
+    color: ${({ theme }) => theme.colors.primary}
+  }
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./header.styled";
+import { Button } from "@components/Button";
 
 export default function Header() {
 	return (
@@ -9,7 +10,7 @@ export default function Header() {
 
 				<figcaption>
 					<span>Thin</span>
-					<span>Cut</span>
+					<span id="text-primary">Cut</span>
 				</figcaption>
 			</S.LogoBox>
 
@@ -20,7 +21,8 @@ export default function Header() {
 				<a href="#gallery">Galeria</a>
 				<a href="#contact">Contato</a>
 			</S.NavBox>
-			<button>Agendar Corte</button>
+
+			<Button title="Agendar Corte" />
 		</S.Header>
 	);
 }

@@ -5,7 +5,7 @@ export const BannerContainer = styled.div`
 	min-height: 100vh;
 	padding: 1rem;
 
-	background-image: url("/assets/images/banners/banner-bg4.png");
+	background-image: url("/assets/images/banners/banner-bg2.png");
 	background-size: 100%;
 	background-repeat: no-repeat;
 `;

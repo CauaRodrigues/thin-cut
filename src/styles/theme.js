@@ -7,6 +7,7 @@ export const theme = {
 		gray: "#95918B",
 		light: "#FFFFFF",
 		none: "rgba(255, 255, 255, 0)",
+		primary_dark: "#2D667E",
 	},
 	fonts: {
 		fm: {
