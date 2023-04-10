@@ -1,8 +1,9 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 
 import TopInfo from "@section/TopInfo";
 import Banner from "@section/Banner";
-import MediaQuery from "react-responsive";
+import AboutUs from "@section/AboutUs";
 
 export default function Home() {
 	return (
@@ -11,6 +12,7 @@ export default function Home() {
 				<TopInfo />
 			</MediaQuery>
 			<Banner />
+			<AboutUs />
 		</>
 	);
 }
