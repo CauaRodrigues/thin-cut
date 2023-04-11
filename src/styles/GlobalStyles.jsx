@@ -33,6 +33,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #text-primary {
-    color: ${({ theme }) => theme.colors.primary}
+    color: ${({ theme }) => theme.colors.primary};
+    font-family: inherit;
   }
 `;

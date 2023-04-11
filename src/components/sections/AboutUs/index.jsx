@@ -4,30 +4,33 @@ import * as S from "./about.styled";
 export default function AboutUs() {
 	return (
 		<S.ContainerAbout>
-			<h1>Sobre nós</h1>
+			<h2>Sobre nós</h2>
 
-			<div>
-				<div className="box-images">
+			<S.Content>
+				<S.BoxImages>
 					<figure>
 						<img
-							src="/assets/images/about/image1.png"
+							src="/assets/images/about/image2.png"
 							alt="Homem de boné cortando cabelo"
 						/>
 					</figure>
 
 					<figure>
 						<img
-							src="/assets/images/about/image2.png"
+							src="/assets/images/about/image1.png"
 							alt="Homem cacheado e de chapéu cortando cabelo"
 						/>
 					</figure>
-				</div>
+				</S.BoxImages>
 
-				<div className="box">
-					<div className="content-text">
-						<h1>
-							Proporcionando uma experiência de corte diferenciada desde 2012.
-						</h1>
+				<S.Box>
+					<S.ContentText>
+						<h3>
+							Proporcionando uma <span id="text-primary">experiência</span> de
+							corte <span id="text-primary">diferenciada</span> desde{" "}
+							<span id="text-primary">2012</span>.
+						</h3>
+
 						<p>
 							Somos uma barbearia moderna e inovadora, que valoriza a arte do
 							corte de cabelo e da barba. Nossos profissionais são altamente
@@ -36,21 +39,21 @@ export default function AboutUs() {
 							você encontra um ambiente descontraído e acolhedor, perfeito para
 							relaxar e cuidar da sua aparência.
 						</p>
-					</div>
+					</S.ContentText>
 
-					<div className="metrics">
-						<div className="metric">
-							<span>43</span>
-							<span>Anos de experiência</span>
-						</div>
+					<S.BoxMetrics>
+						<S.Metric>
+							<span className="number">43</span>
+							<span className="caption">Anos de experiência</span>
+						</S.Metric>
 
-						<div className="metric">
-							<span>+200</span>
-							<span>Clientes Satisfeitos</span>
-						</div>
-					</div>
-				</div>
-			</div>
+						<S.Metric>
+							<span className="number">+200</span>
+							<span className="caption">Clientes Satisfeitos</span>
+						</S.Metric>
+					</S.BoxMetrics>
+				</S.Box>
+			</S.Content>
 		</S.ContainerAbout>
 	);
 }

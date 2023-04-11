@@ -16,8 +16,8 @@ export const BannerContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 
-	@media (max-width: 500px) {
-		min-height: 70vh;
+	@media (max-width: 460px) {
+		min-height: 80vh;
 	}
 
 	.content-text {
@@ -48,7 +48,7 @@ export const BannerContainer = styled.div`
 		h1 {
 			font-weight: ${({ theme }) => theme.fonts.fw.bd};
 			font-family: ${({ theme }) => theme.fonts.fm.asap};
-			font-size: min(3rem, 10vw);
+			font-size: min(3rem, 9vw);
 		}
 
 		p {
