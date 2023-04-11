@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "@section/Header";
 import { Button } from "@components/Button";
 
 import * as S from "./banner.styled";
 
 export default function Banner() {
-	const [image, setImage] = useState("banner1");
+	const [image, setImage] = useState(`banner1`);
 	const imagesList = ["banner1", "banner2", "banner3", "banner4", "banner5"];
 
 	return (

@@ -38,7 +38,6 @@ export const BoxImages = styled.div`
 	flex: 1;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	gap: 0.5rem;
 
 	@media (max-width: 610px) {
