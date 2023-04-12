@@ -9,12 +9,12 @@ export const Content = styled.div`
 	@media (max-width: 1000px) {
 		flex-direction: column-reverse;
 		align-items: center;
-		min-height: 100vh;
 		padding-bottom: 10rem;
 	}
 
 	@media (max-width: 610px) {
-		padding: 0;
+		padding-bottom: 12px;
+		min-height: max-content;
 	}
 `;
 
