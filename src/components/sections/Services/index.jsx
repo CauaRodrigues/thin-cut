@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "styled-components";
 
 import { Button } from "@components/Button";
@@ -7,13 +7,26 @@ import * as S from "./services.styled";
 
 export default function Services() {
 	const theme = useTheme();
+	const [fixedDetails, setFixedDetails] = useState("");
+
+	function handlerFixedService(service) {
+		if (service === fixedDetails) {
+			setFixedDetails("");
+		} else {
+			setFixedDetails(service);
+		}
+	}
 
 	return (
 		<Section background={theme.colors.dark} color={theme.colors.main}>
 			<h2>Serviços</h2>
 
 			<S.CardsServices>
-				<S.CardService image="service1.png">
+				<S.CardService
+					image="service1.png"
+					fixed={fixedDetails === "cut"}
+					onClick={() => handlerFixedService("cut")}
+				>
 					<div className="card--info">
 						<h3>Corte</h3>
 						<p>
@@ -24,7 +37,11 @@ export default function Services() {
 					</div>
 				</S.CardService>
 
-				<S.CardService image="service2.png">
+				<S.CardService
+					image="service2.png"
+					fixed={fixedDetails === "beard"}
+					onClick={() => handlerFixedService("beard")}
+				>
 					<div className="card--info">
 						<h3>Barba</h3>
 						<p>
@@ -35,7 +52,11 @@ export default function Services() {
 					</div>
 				</S.CardService>
 
-				<S.CardService image="service3.png">
+				<S.CardService
+					image="service3.png"
+					fixed={fixedDetails === "complet"}
+					onClick={() => handlerFixedService("complet")}
+				>
 					<div className="card--info">
 						<h3>Corte e Barba</h3>
 
@@ -47,7 +68,11 @@ export default function Services() {
 					</div>
 				</S.CardService>
 
-				<S.CardService image="service4.png">
+				<S.CardService
+					image="service4.png"
+					fixed={fixedDetails === "cleaning"}
+					onClick={() => handlerFixedService("cleaning")}
+				>
 					<div className="card--info">
 						<h3>Limpeza Facial</h3>
 						<p>

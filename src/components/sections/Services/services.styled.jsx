@@ -32,7 +32,7 @@ export const CardService = styled.div`
 	}
 
 	.card--info {
-		height: 55px;
+		height: ${(props) => (props.fixed ? "37vh" : "55px")};
 		padding: 12px 0 12px 16px;
 		margin-bottom: 24px;
 
@@ -43,10 +43,11 @@ export const CardService = styled.div`
 		overflow-y: hidden;
 		border-left: 3px solid ${({ theme }) => theme.colors.primary};
 		background-color: rgba(33, 33, 33, 0.82);
-
 		transition: ease-in-out 0.6s;
 
 		h3 {
+			color: ${(props) =>
+				props.fixed ? props.theme.colors.primary : props.theme.colors.main};
 			font-family: ${({ theme }) => theme.fonts.fm.asap};
 			font-weight: ${({ theme }) => theme.fonts.fw.md};
 			font-size: min(1.35rem, 5vw);
