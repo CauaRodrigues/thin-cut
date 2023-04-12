@@ -22,30 +22,47 @@ export const CardService = styled.div`
 	background-position: center;
 
 	cursor: pointer;
-	transition: ease-in-out 0.6s;
 
-	&:hover {
-		p,
-		span {
-			display: flex;
+	&:hover .card--info {
+		height: 37vh;
+
+		h3 {
+			color: ${({ theme }) => theme.colors.primary};
 		}
 	}
 
-	.card--title {
+	.card--info {
+		height: 55px;
 		padding: 12px 0 12px 16px;
 		margin-bottom: 24px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		overflow-y: hidden;
 		border-left: 3px solid ${({ theme }) => theme.colors.primary};
 		background-color: rgba(33, 33, 33, 0.82);
 
+		transition: ease-in-out 0.6s;
+
 		h3 {
 			font-family: ${({ theme }) => theme.fonts.fm.asap};
-			font-weight: ${({ theme }) => theme.fonts.fw.rg};
+			font-weight: ${({ theme }) => theme.fonts.fw.md};
 			font-size: min(1.35rem, 5vw);
+			margin-bottom: 0.5rem;
 		}
-	}
 
-	p,
-	span {
-		display: none;
+		p {
+			font-weight: ${({ theme }) => theme.fonts.fw.th};
+			font-size: min(1rem, 4vw);
+		}
+
+		.price {
+			color: ${({ theme }) => theme.colors.primary};
+			font-size: min(1.8rem, 5.8vw);
+			font-family: ${({ theme }) => theme.fonts.fm.asap};
+			font-weight: ${({ theme }) => theme.fonts.fw.md};
+		}
 	}
 `;

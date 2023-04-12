@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+const Section = styled.section`
 	width: 100%;
 	padding: 24px 12px;
 
@@ -24,3 +24,5 @@ export const Section = styled.section`
 		gap: 0.5rem;
 	}
 `;
+
+export default Section;
