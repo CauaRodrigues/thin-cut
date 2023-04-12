@@ -26,7 +26,7 @@ export const CardsServices = styled.div`
 	}
 `;
 
-export const CardService = styled.div`
+export const CardService = styled.button`
 	min-height: 50vh;
 
 	display: flex;
@@ -44,8 +44,10 @@ export const CardService = styled.div`
 		min-height: 45vh;
 	}
 
-	&:hover .card--info {
+	&:hover .card--info,
+	&:focus .card--info {
 		height: 37vh;
+		overflow-y: auto;
 
 		h3 {
 			color: ${({ theme }) => theme.colors.primary};
@@ -53,26 +55,26 @@ export const CardService = styled.div`
 	}
 
 	.card--info {
-		height: ${(props) => (props.fixed ? "37vh" : "55px")};
-		padding: 12px 0 12px 16px;
+		height: 55px;
+		padding: 12px;
 		margin-bottom: 24px;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
-		overflow-y: ${(props) => (props.fixed ? "auto" : "hidden")};
+		overflow-y: hidden;
 		border-left: 3px solid ${({ theme }) => theme.colors.primary};
 		background-color: rgba(33, 33, 33, 0.82);
 		transition: ease-in-out 0.6s;
+		text-align: left;
 
 		::-webkit-scrollbar {
 			display: none;
 		}
 
 		h3 {
-			color: ${(props) =>
-				props.fixed ? props.theme.colors.primary : props.theme.colors.main};
+			color: ${({ theme }) => theme.colors.main};
 			font-family: ${({ theme }) => theme.fonts.fm.asap};
 			font-weight: ${({ theme }) => theme.fonts.fw.md};
 			font-size: min(1.35rem, 8vw);
@@ -80,6 +82,7 @@ export const CardService = styled.div`
 		}
 
 		p {
+			color: ${({ theme }) => theme.colors.main};
 			font-weight: ${({ theme }) => theme.fonts.fw.rg};
 			font-size: min(1rem, 4vw);
 		}
