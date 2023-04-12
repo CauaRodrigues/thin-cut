@@ -1,9 +1,10 @@
 import React from "react";
 import * as S from "./about.styled";
+import * as SG from "@styled/Section";
 
 export default function AboutUs() {
 	return (
-		<S.ContainerAbout>
+		<SG.Section>
 			<h2>Sobre nós</h2>
 
 			<S.Content>
@@ -54,6 +55,6 @@ export default function AboutUs() {
 					</S.BoxMetrics>
 				</S.Box>
 			</S.Content>
-		</S.ContainerAbout>
+		</SG.Section>
 	);
 }
