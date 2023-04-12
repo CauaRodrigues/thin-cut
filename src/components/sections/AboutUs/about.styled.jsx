@@ -1,27 +1,5 @@
 import styled from "styled-components";
 
-export const ContainerAbout = styled.section`
-	width: 100%;
-	padding: 24px 12px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	gap: 2rem;
-
-	h2 {
-		font-family: ${({ theme }) => theme.fonts.fm.asap};
-		font-weight: ${({ theme }) => theme.fonts.fw.bd};
-		font-size: min(2rem, 7vw);
-		letter-spacing: 2px;
-	}
-
-	@media (max-width: 500px) {
-		gap: 0.5rem;
-	}
-`;
-
 export const Content = styled.div`
 	width: 100%;
 	display: flex;
@@ -31,6 +9,12 @@ export const Content = styled.div`
 	@media (max-width: 1000px) {
 		flex-direction: column-reverse;
 		align-items: center;
+		min-height: 100vh;
+		padding-bottom: 10rem;
+	}
+
+	@media (max-width: 610px) {
+		padding: 0;
 	}
 `;
 
