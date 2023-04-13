@@ -12,6 +12,7 @@ export const BoxAvatar = styled.div`
 	background-color: ${({ theme }) => theme.colors.main};
 	box-shadow: 8px 11px 19px 5px rgba(0, 0, 0, 0.25);
 `;
+export const AvatarImage = styled.figure``;
 
 export const AvatarDetails = styled.div`
 	width: 50%;
@@ -32,5 +33,19 @@ export const AvatarDetails = styled.div`
 		color: ${({ theme }) => theme.colors.gray};
 		font-weight: ${({ theme }) => theme.fonts.fw.rg};
 		font-size: min(1rem, 3.5vw);
+	}
+`;
+
+export const Pointers = styled.div`
+	display: flex;
+	gap: 1rem;
+`;
+
+export const PointerButton = styled.button`
+	img {
+		cursor: pointer;
+		border-radius: 50%;
+		border: 0.25em solid ${({ theme }) => theme.colors.primary};
+		width: 64px;
 	}
 `;

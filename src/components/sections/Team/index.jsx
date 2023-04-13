@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Section from "@styled/Section";
 import Metric from "@styled/Metric";
 import { Button } from "@components/Button";
@@ -10,6 +10,7 @@ export default function Team() {
 		{
 			id: 1,
 			name: "Daniel Ramon",
+			image: "/assets/images/professionals/professional1.png",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 26,
@@ -18,6 +19,7 @@ export default function Team() {
 		{
 			id: 2,
 			name: "Felipe Silva",
+			image: "/assets/images/professionals/professional2.png",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 12,
@@ -26,6 +28,7 @@ export default function Team() {
 		{
 			id: 3,
 			name: "Rodriguez Aguëro",
+			image: "/assets/images/professionals/professional3.png",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 5,
@@ -41,12 +44,12 @@ export default function Team() {
 			</h3>
 
 			<S.BoxAvatar>
-				<figure>
+				<S.AvatarImage>
 					<img
 						src="/assets/images/professionals/professional1.png"
 						alt="Avata de Daniel Ramon"
 					/>
-				</figure>
+				</S.AvatarImage>
 
 				<S.AvatarDetails>
 					<h4>
@@ -67,6 +70,18 @@ export default function Team() {
 					<Button title="Agendar Um Corte Comigo" />
 				</S.AvatarDetails>
 			</S.BoxAvatar>
+
+			<S.Pointers>
+				{Profissionals.map(({ id, name, image }) => (
+					<Fragment key={id}>
+						<S.PointerButton>
+							<img src={image} alt={name} />
+
+							<span>{name}</span>
+						</S.PointerButton>
+					</Fragment>
+				))}
+			</S.Pointers>
 		</Section>
 	);
 }
