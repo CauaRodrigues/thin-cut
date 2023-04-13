@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Section = styled.section`
 	width: 100%;
-	padding: 24px 12px;
+	padding: 3rem 12px;
 
 	display: flex;
 	flex-direction: column;
@@ -13,6 +13,10 @@ const Section = styled.section`
 	background-color: ${(props) => props.background || props.theme.colors.main};
 	color: ${(props) => props.color || props.theme.colors.title};
 
+	@media (max-width: 500px) {
+		gap: 1rem;
+	}
+
 	h2 {
 		font-family: ${({ theme }) => theme.fonts.fm.asap};
 		font-weight: ${({ theme }) => theme.fonts.fw.bd};
@@ -20,8 +24,10 @@ const Section = styled.section`
 		letter-spacing: 2px;
 	}
 
-	@media (max-width: 500px) {
-		gap: 0.5rem;
+	h3 {
+		font-family: ${({ theme }) => theme.fonts.fm.asap};
+		font-weight: ${({ theme }) => theme.fonts.fw.sb};
+		font-size: min(1.8rem, 6.5vw);
 	}
 `;
 

@@ -1,6 +1,9 @@
 import React from "react";
-import * as S from "./about.styled";
+
 import Section from "@styled/Section";
+import Metric from "@styled/Metric";
+
+import * as S from "./about.styled";
 
 export default function AboutUs() {
 	return (
@@ -43,15 +46,15 @@ export default function AboutUs() {
 					</S.ContentText>
 
 					<S.BoxMetrics>
-						<S.Metric>
+						<Metric sizeNumber="3">
 							<span className="number">43</span>
 							<span className="caption">Anos de experiência</span>
-						</S.Metric>
+						</Metric>
 
-						<S.Metric>
+						<Metric sizeNumber="3">
 							<span className="number">+200</span>
 							<span className="caption">Clientes Satisfeitos</span>
-						</S.Metric>
+						</Metric>
 					</S.BoxMetrics>
 				</S.Box>
 			</S.Content>
