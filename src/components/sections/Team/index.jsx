@@ -41,10 +41,12 @@ export default function Team() {
 			</h3>
 
 			<S.BoxAvatar>
-				<img
-					src="/assets/images/professionals/professional1.png"
-					alt="Avata de Daniel Ramon"
-				/>
+				<figure>
+					<img
+						src="/assets/images/professionals/professional1.png"
+						alt="Avata de Daniel Ramon"
+					/>
+				</figure>
 
 				<S.AvatarDetails>
 					<h4>
@@ -62,7 +64,7 @@ export default function Team() {
 						<span className="caption">Anos de experiência</span>
 					</Metric>
 
-					<Button title="Agende Comigo" />
+					<Button title="Agendar Um Corte Comigo" />
 				</S.AvatarDetails>
 			</S.BoxAvatar>
 		</Section>
