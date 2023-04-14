@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BoxAvatar = styled.div`
-	width: 70%;
+	width: 60%;
 	padding: 24px;
 
 	display: flex;
@@ -12,7 +12,12 @@ export const BoxAvatar = styled.div`
 	background-color: ${({ theme }) => theme.colors.main};
 	box-shadow: 8px 11px 19px 5px rgba(0, 0, 0, 0.25);
 `;
-export const AvatarImage = styled.figure``;
+export const AvatarImage = styled.figure`
+	width: 40%;
+	img {
+		width: 100%;
+	}
+`;
 
 export const AvatarDetails = styled.div`
 	width: 50%;
@@ -41,11 +46,14 @@ export const Pointers = styled.div`
 	gap: 1rem;
 `;
 
-export const PointerButton = styled.button`
+export const PointerButton = styled.div`
+	cursor: ${(props) => (props.active ? "auto" : "pointer")};
+
 	img {
-		cursor: pointer;
 		border-radius: 50%;
-		border: 0.25em solid ${({ theme }) => theme.colors.primary};
 		width: 64px;
+		border: 0.25em solid
+			${(props) =>
+				props.active ? props.theme.colors.primary : props.theme.colors.black};
 	}
 `;

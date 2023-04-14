@@ -4,36 +4,48 @@ import Metric from "@styled/Metric";
 import { Button } from "@components/Button";
 
 import * as S from "./team.styled";
+import { useState } from "react";
 
 export default function Team() {
-	const Profissionals = [
+	const Barbers = [
 		{
-			id: 1,
+			id: 0,
 			name: "Daniel Ramon",
-			image: "/assets/images/professionals/professional1.png",
+			image: {
+				lg: "/assets/images/professionals/professional1.png",
+				sm: "/assets/images/professionals/smallprofessional1.png",
+			},
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 26,
 			hierarchy: "CEO",
 		},
 		{
-			id: 2,
+			id: 1,
 			name: "Felipe Silva",
-			image: "/assets/images/professionals/professional2.png",
+			image: {
+				lg: "/assets/images/professionals/professional2.png",
+				sm: "/assets/images/professionals/smallprofessional2.png",
+			},
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 12,
 			hierarchy: "Sócio",
 		},
 		{
-			id: 3,
+			id: 2,
 			name: "Rodriguez Aguëro",
-			image: "/assets/images/professionals/professional3.png",
+			image: {
+				lg: "/assets/images/professionals/professional3.png",
+				sm: "/assets/images/professionals/smallprofessional3.png",
+			},
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor luctus.",
 			experience: 5,
 		},
 	];
+
+	const [barber, setBarber] = useState(Barbers[0]);
 
 	return (
 		<Section>
@@ -45,25 +57,23 @@ export default function Team() {
 
 			<S.BoxAvatar>
 				<S.AvatarImage>
-					<img
-						src="/assets/images/professionals/professional1.png"
-						alt="Avata de Daniel Ramon"
-					/>
+					<img src={barber.image.lg} alt={`Avata de ${barber.name}`} />
 				</S.AvatarImage>
 
 				<S.AvatarDetails>
 					<h4>
-						Daniel Ramon - <span id="text-primary">CEO</span>
+						{barber.name}{" "}
+						{barber.hierarchy ? (
+							<>
+								- <span id="text-primary">{barber.hierarchy}</span>
+							</>
+						) : null}
 					</h4>
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-						pretium volutpat libero, at mattis mi. Integer sodales mi ut tempor
-						luctus.
-					</p>
+					<p>{barber.description}</p>
 
 					<Metric sizeNumber="2">
-						<span className="number">26</span>
+						<span className="number">{barber.experience}</span>
 						<span className="caption">Anos de experiência</span>
 					</Metric>
 
@@ -72,12 +82,13 @@ export default function Team() {
 			</S.BoxAvatar>
 
 			<S.Pointers>
-				{Profissionals.map(({ id, name, image }) => (
+				{Barbers.map(({ id, name, image }) => (
 					<Fragment key={id}>
-						<S.PointerButton>
-							<img src={image} alt={name} />
-
-							<span>{name}</span>
+						<S.PointerButton
+							onClick={() => setBarber(Barbers[id])}
+							active={id === barber.id}
+						>
+							<img src={image.sm} alt={name} />
 						</S.PointerButton>
 					</Fragment>
 				))}

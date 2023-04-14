@@ -44,8 +44,7 @@ export const CardService = styled.button`
 		min-height: 45vh;
 	}
 
-	&:hover .card--info,
-	&:focus .card--info {
+	&:is(:hover, :focus) .card--info {
 		height: 37vh;
 		overflow-y: auto;
 
