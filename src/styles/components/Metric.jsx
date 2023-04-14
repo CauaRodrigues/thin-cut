@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Metric = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: ${(props) => (props.alignCenter ? "center" : "flex-start")};
 
 	span {
 		color: ${({ theme }) => theme.colors.primary};

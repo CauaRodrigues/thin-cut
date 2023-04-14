@@ -56,9 +56,7 @@ export default function Team() {
 			</h3>
 
 			<S.BoxAvatar>
-				<S.AvatarImage>
-					<img src={barber.image.lg} alt={`Avata de ${barber.name}`} />
-				</S.AvatarImage>
+				<img src={barber.image.lg} alt={`Avata de ${barber.name}`} />
 
 				<S.AvatarDetails>
 					<h4>
@@ -72,7 +70,7 @@ export default function Team() {
 
 					<p>{barber.description}</p>
 
-					<Metric sizeNumber="2">
+					<Metric sizeNumber="2" alignCenter>
 						<span className="number">{barber.experience}</span>
 						<span className="caption">Anos de experiência</span>
 					</Metric>
