@@ -35,7 +35,15 @@ const Section = styled.section`
 		text-align: center;
 		color: ${({ theme }) => theme.colors.gray};
 		font-weight: ${({ theme }) => theme.fonts.fw.md};
-		font-size: min(1rem, 4vw);
+		font-size: min(1rem, 3vw);
+
+		@media (max-width: 800px) {
+			width: 80%;
+		}
+
+		@media (max-width: 400px) {
+			width: 95%;
+		}
 	}
 `;
 
