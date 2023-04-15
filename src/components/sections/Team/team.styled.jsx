@@ -11,7 +11,7 @@ export const BoxAvatar = styled.div`
 	gap: 1.5rem;
 
 	background-color: ${({ theme }) => theme.colors.main};
-	box-shadow: 8px 11px 19px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 6px 6px 24px 1px rgba(0, 0, 0, 0.15);
 	border-radius: 32px;
 
 	@media (max-width: 1000px) {

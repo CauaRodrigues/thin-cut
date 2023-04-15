@@ -7,6 +7,10 @@ import AboutUs from "@section/AboutUs";
 import Services from "@section/Services";
 import Team from "@section/Team";
 import Gallery from "@section/Gallery";
+import Reviews from "@section/Reviews";
+import Location from "@section/Location";
+import Footer from "@section/Footer";
+import Appointment from "@section/Appointment";
 
 export default function Home() {
 	return (
@@ -19,6 +23,10 @@ export default function Home() {
 			<Services />
 			<Team />
 			<Gallery />
+			<Reviews />
+			<Location />
+			<Appointment />
+			<Footer />
 		</>
 	);
 }
