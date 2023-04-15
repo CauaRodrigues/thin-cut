@@ -29,6 +29,14 @@ const Section = styled.section`
 		font-weight: ${({ theme }) => theme.fonts.fw.sb};
 		font-size: min(1.8rem, 6.5vw);
 	}
+
+	p.description {
+		width: 55%;
+		text-align: center;
+		color: ${({ theme }) => theme.colors.gray};
+		font-weight: ${({ theme }) => theme.fonts.fw.md};
+		font-size: min(1rem, 4vw);
+	}
 `;
 
 export default Section;
