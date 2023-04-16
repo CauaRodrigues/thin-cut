@@ -1,6 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Button = styled.button`
+const Button = ({ title, outline }) => (
+	<ButtonStyled invert={outline}>{title}</ButtonStyled>
+);
+
+const ButtonStyled = styled.button`
 	padding: 10px 16px;
 
 	background-color: ${(props) =>
@@ -22,3 +27,5 @@ export const Button = styled.button`
 		border-color: ${({ theme }) => theme.colors.primary_dark};
 	}
 `;
+
+export default Button;

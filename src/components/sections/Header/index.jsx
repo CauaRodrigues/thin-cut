@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./header.styled";
-import { Button } from "@components/Button";
+import Button from "@components/Button";
 import MediaQuery from "react-responsive";
 
 export default function Header() {

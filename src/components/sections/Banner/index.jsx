@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "@section/Header";
-import { Button } from "@components/Button";
+import Button from "@components/Button";
 
 import * as S from "./banner.styled";
 

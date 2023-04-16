@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const BoxBook = styled.div`
 	width: 95%;
-	padding: 16px;
+	padding: 2rem;
 
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 
 	background-color: #4e93b13f;
@@ -14,10 +14,8 @@ export const BoxBook = styled.div`
 `;
 
 export const InfoBook = styled.div`
-	width: 45%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: flex-start;
 	gap: 0.5rem;
 
@@ -48,11 +46,5 @@ export const GroupButtons = styled.div`
 	margin-top: 1rem;
 	display: flex;
 	gap: 1rem;
-`;
-
-export const SaleImage = styled.figure`
-	width: max-content;
-	img {
-		width: 85%;
-	}
+	flex-wrap: wrap;
 `;

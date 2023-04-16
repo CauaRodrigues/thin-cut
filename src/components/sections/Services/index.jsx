@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "styled-components";
 
-import { Button } from "@components/Button";
+import Button from "@components/Button";
 import Section from "@styled/Section";
 import * as S from "./services.styled";
 

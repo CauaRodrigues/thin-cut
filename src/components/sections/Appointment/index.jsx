@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@components/Button";
+import Button from "@components/Button";
 import Section from "@styled/Section";
 import * as S from "./appointment.styled";
 
@@ -17,10 +17,6 @@ export default function Appointment() {
 						<Button title="Copiar Código de 20%" outline />
 					</S.GroupButtons>
 				</S.InfoBook>
-
-				<S.SaleImage>
-					<img src="/assets/icons/sale.png" />
-				</S.SaleImage>
 			</S.BoxBook>
 		</Section>
 	);

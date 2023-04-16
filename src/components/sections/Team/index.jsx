@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Section from "@styled/Section";
 import Metric from "@styled/Metric";
-import { Button } from "@components/Button";
+import Button from "@components/Button";
 
 import * as S from "./team.styled";
 import { useState } from "react";
