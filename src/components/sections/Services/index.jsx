@@ -20,7 +20,7 @@ export default function Services() {
 							Corte de cabelo tradicional com tesoura e a máquina na mão de
 							profissionais que entendem MUITO BEM do assunto.
 						</p>
-						<span className="price">R$ 40,00</span>
+						<span className="price">R$ 75,00</span>
 					</div>
 				</S.CardService>
 
@@ -31,7 +31,7 @@ export default function Services() {
 							Na Thin Cut, nossos clientes podem realizar desde aparar a barba
 							até os desenhos mais modernos ou tradicionais.
 						</p>
-						<span className="price">R$ 35,00</span>
+						<span className="price">R$ 65,00</span>
 					</div>
 				</S.CardService>
 
@@ -43,7 +43,7 @@ export default function Services() {
 							Serviço completo, cliente já sai de cabelo e barba feitos e com
 							desconto garantido.
 						</p>
-						<span className="price">R$ 65,00</span>
+						<span className="price">R$ 132,00</span>
 					</div>
 				</S.CardService>
 
@@ -54,7 +54,7 @@ export default function Services() {
 							Fazemos a higienização na pele, removendo os cravos e impurezas,
 							promovendo a renovação celular. Também fazemos a sobrancelha.
 						</p>
-						<span className="price">R$ 30,00</span>
+						<span className="price">R$ 95,00</span>
 					</div>
 				</S.CardService>
 			</S.CardsServices>
