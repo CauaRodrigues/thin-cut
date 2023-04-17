@@ -20,7 +20,7 @@ export default function TopInfo() {
 			</S.InfoGroup>
 
 			<S.InfoGroup>
-				<a href="https://www.instagram.com" target="_blank">
+				<a href="https://www.instagram.com" rel="noreferrer" target="_blank">
 					<Icon
 						sizes={24}
 						src="/assets/icons/Instagram.svg"
@@ -28,7 +28,7 @@ export default function TopInfo() {
 					/>
 				</a>
 
-				<a href="https://www.whatsapp.com/" target="_blank">
+				<a href="https://www.whatsapp.com/" rel="noreferrer" target="_blank">
 					<Icon
 						sizes={24}
 						src="/assets/icons/WhatsApp.svg"
@@ -36,7 +36,7 @@ export default function TopInfo() {
 					/>
 				</a>
 
-				<a href="https://web.facebook.com/" target="_blank">
+				<a href="https://web.facebook.com/" rel="noreferrer" target="_blank">
 					<Icon
 						sizes={24}
 						src="/assets/icons/Facebook.svg"
@@ -44,7 +44,7 @@ export default function TopInfo() {
 					/>
 				</a>
 
-				<a href="https://www.tiktok.com/" target="_blank">
+				<a href="https://www.tiktok.com/" rel="noreferrer" target="_blank">
 					<Icon sizes={24} src="/assets/icons/TikTok.svg" alt="Tiktok icon" />
 				</a>
 			</S.InfoGroup>

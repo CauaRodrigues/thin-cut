@@ -1,19 +1,15 @@
 import React from "react";
-import * as S from "./header.styled";
-import Button from "@components/Button";
 import MediaQuery from "react-responsive";
+
+import Button from "@components/Button";
+import Logo from "@components/Logo";
+
+import * as S from "./header.styled";
 
 export default function Header() {
 	return (
 		<S.Header>
-			<S.LogoBox>
-				<img src="/assets/logo/logo.png" alt="logo Thin Cut" />
-
-				<figcaption>
-					<span>Thin</span>
-					<span id="text-primary">Cut</span>
-				</figcaption>
-			</S.LogoBox>
+			<Logo />
 
 			<MediaQuery minWidth={700}>
 				<S.NavBox>

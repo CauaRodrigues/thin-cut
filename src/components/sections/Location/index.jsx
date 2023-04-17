@@ -1,13 +1,10 @@
 import React from "react";
-import { useTheme } from "styled-components";
 import Section from "@styled/Section";
 import * as S from "./location.styled";
 
 export default function Location() {
-	const theme = useTheme();
-
 	return (
-		<Section background={theme.colors.dark} color={theme.colors.main}>
+		<Section>
 			<h2>Onde nos encontrar?</h2>
 
 			<S.Map
