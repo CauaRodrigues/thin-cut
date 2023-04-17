@@ -2,8 +2,9 @@ import React from "react";
 import { useTheme } from "styled-components";
 
 import Section from "@styled/Section";
-import Logo from "@components/Logo";
 import Icon from "@styled/Icon";
+import Logo from "@components/Logo";
+import Button from "@components/Button";
 
 import * as S from "./footer.styled";
 
@@ -16,34 +17,49 @@ export default function Footer() {
 				<S.Menu>
 					<Logo />
 
-					<ul>
-						<li>Sobre nós</li>
-						<li>Serviços</li>
-						<li>Time</li>
-						<li>Galeria</li>
-						<li>Avaliações</li>
-						<li>Localização</li>
-						<li>Contato</li>
-					</ul>
+					<S.Links>
+						<a href="#about">Sobre nós</a>
+						<a href="#services">Serviços</a>
+						<a href="#team">Time</a>
+						<a href="#gallery">Galeria</a>
+						<a href="#reviews">Avaliações</a>
+						<a href="#location">Localização</a>
+						<a href="#contact">Contato</a>
+					</S.Links>
 				</S.Menu>
 
-				<S.FeedbackForm>
+				<S.FeedbackForm id="feedback">
 					<h2>Feedback</h2>
 
-					<div className="field">
-						<label htmlFor="name">Nome</label>
-						<input type="text" />
-					</div>
+					<S.Field>
+						<label htmlFor="name" id="name">
+							Nome
+						</label>
+						<input type="text" placeholder="Nome" required />
+					</S.Field>
 
-					<div className="field">
-						<label htmlFor="email">E-mail</label>
-						<input type="email" />
-					</div>
+					<S.Field>
+						<label htmlFor="email" id="email">
+							E-mail
+						</label>
+						<input type="email" placeholder="Seu melhor e-mail" required />
+					</S.Field>
 
-					<div className="field">
-						<label htmlFor="message">Mensagem</label>
-						<input type="text" />
-					</div>
+					<S.Field>
+						<label htmlFor="message" id="message">
+							Mensagem
+						</label>
+						<textarea
+							rows="4"
+							cols="22"
+							name="message"
+							form="feedback"
+							placeholder="Feedback"
+							required
+						/>
+					</S.Field>
+
+					<Button title="Enviar Feedback" />
 				</S.FeedbackForm>
 
 				<S.Contact>
