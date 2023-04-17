@@ -79,9 +79,35 @@ export const Field = styled.div`
 `;
 
 export const Contact = styled.div`
+	width: 25%;
+
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	gap: 0.8rem;
+
+	h3 {
+		text-align: center;
+	}
+`;
+
+export const ContactInfo = styled.div`
+	max-width: 100%;
+
+	h4 {
+		color: ${({ theme }) => theme.colors.primary};
+		font-weight: ${({ theme }) => theme.fonts.fw.sb};
+		margin-bottom: 0.2rem;
+	}
+
+	span {
+		margin-left: 8px;
+	}
+`;
+
+export const SocialMedia = styled.div`
+	margin-left: 8px;
+	display: flex;
+	gap: 0.6rem;
 `;
 
 export const Rights = styled.div`

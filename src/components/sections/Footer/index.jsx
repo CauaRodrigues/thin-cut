@@ -64,24 +64,28 @@ export default function Footer() {
 
 				<S.Contact>
 					<h3>Contato</h3>
-					<div>
+
+					<S.ContactInfo>
 						<h4>Número de telefone</h4>
 						<span>+55 11 99999-9999</span>
-					</div>
-					<div>
+					</S.ContactInfo>
+
+					<S.ContactInfo>
 						<h4>Endereço</h4>
 						<span>Palace Embankment, 32, St Petersburg, Rússia, 190000</span>
-					</div>
-					<div>
+					</S.ContactInfo>
+
+					<S.ContactInfo>
 						<h4>Redes Sociais</h4>
-						<div>
+
+						<S.SocialMedia>
 							<a
 								href="https://www.instagram.com"
 								rel="noreferrer"
 								target="_blank"
 							>
 								<Icon
-									sizes={24}
+									sizes={28}
 									src="/assets/icons/Instagram.svg"
 									alt="instagram icon"
 								/>
@@ -93,7 +97,7 @@ export default function Footer() {
 								target="_blank"
 							>
 								<Icon
-									sizes={24}
+									sizes={28}
 									src="/assets/icons/WhatsApp.svg"
 									alt="Whatsapp icon"
 								/>
@@ -105,7 +109,7 @@ export default function Footer() {
 								target="_blank"
 							>
 								<Icon
-									sizes={24}
+									sizes={28}
 									src="/assets/icons/Facebook.svg"
 									alt="Facebook icon"
 								/>
@@ -117,13 +121,13 @@ export default function Footer() {
 								target="_blank"
 							>
 								<Icon
-									sizes={24}
+									sizes={28}
 									src="/assets/icons/TikTok.svg"
 									alt="Tiktok icon"
 								/>
 							</a>
-						</div>
-					</div>
+						</S.SocialMedia>
+					</S.ContactInfo>
 				</S.Contact>
 			</S.Footer>
 
