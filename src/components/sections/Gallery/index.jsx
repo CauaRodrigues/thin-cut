@@ -6,6 +6,7 @@ import * as S from "./gallery.styled";
 export default function Gallery() {
 	return (
 		<Section>
+			<a name="gallery" />
 			<h2>Galeria</h2>
 
 			<p className="description">

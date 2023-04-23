@@ -13,6 +13,7 @@ export default function Footer() {
 
 	return (
 		<Section background={theme.colors.dark} color={theme.colors.main}>
+			<a name="contact" />
 			<S.Footer>
 				<S.Menu>
 					<Logo />

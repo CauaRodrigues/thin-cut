@@ -10,6 +10,7 @@ export default function Services() {
 
 	return (
 		<Section background={theme.colors.dark} color={theme.colors.main}>
+			<a name="services" />
 			<h2>Serviços</h2>
 
 			<S.CardsServices>

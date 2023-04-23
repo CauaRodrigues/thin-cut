@@ -26,7 +26,7 @@ export default function Home() {
 			<Reviews />
 			<Location />
 			<Appointment />
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 }

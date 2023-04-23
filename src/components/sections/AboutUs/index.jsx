@@ -8,6 +8,7 @@ import * as S from "./about.styled";
 export default function AboutUs() {
 	return (
 		<Section>
+			<a name="about" />
 			<h2>Sobre nós</h2>
 
 			<S.Content>

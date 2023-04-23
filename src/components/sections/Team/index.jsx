@@ -12,6 +12,7 @@ export default function Team() {
 
 	return (
 		<Section>
+			<a name="team" />
 			<h2>Time</h2>
 
 			<h3>

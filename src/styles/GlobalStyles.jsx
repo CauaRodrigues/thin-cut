@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     background-color: ${({ theme }) => theme.colors.main};
     color: ${({ theme }) => theme.colors.black};
+    scroll-behavior: smooth;
   }
   
   ul,
