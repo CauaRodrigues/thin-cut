@@ -6,7 +6,7 @@ const Section = styled.section`
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 
