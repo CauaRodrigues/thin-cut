@@ -112,4 +112,38 @@ export const SocialMedia = styled.div`
 
 export const Rights = styled.div`
 	text-align: center;
+	font-size: min(0.9rem, 2.5vw);
+	color: ${({ theme }) => theme.colors.gray};
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+
+	p.rights {
+		font-weight: ${({ theme }) => theme.fonts.fw.rg};
+
+		#text-primary {
+			font-weight: ${({ theme }) => theme.fonts.fw.bd};
+		}
+	}
+
+	.developer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+		font-weight: ${({ theme }) => theme.fonts.fw.sb};
+		color: ${({ theme }) => theme.colors.gray};
+
+		a {
+			color: ${({ theme }) => theme.colors.primary};
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		img {
+			margin-left: 5px;
+			display: inline;
+		}
+	}
 `;

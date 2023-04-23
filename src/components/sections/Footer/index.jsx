@@ -133,12 +133,12 @@ export default function Footer() {
 			</S.Footer>
 
 			<S.Rights>
-				<p>
-					<span id="text-primary">Thin Cut</span> © 2023 Todos direitos
-					reservados.
+				<p className="rights">
+					<span id="text-primary">Thin Cut</span> © {new Date().getFullYear()}{" "}
+					Todos direitos reservados.
 				</p>
 
-				<p>
+				<p className="developer">
 					Desenvolvido por{" "}
 					<a
 						href="https://github.com/CauaRodrigues"
@@ -146,6 +146,7 @@ export default function Footer() {
 						target="_blank"
 					>
 						Cauã
+						<Icon sizes={24} src="/assets/icons/Github.svg" alt="github icon" />
 					</a>
 				</p>
 			</S.Rights>
