@@ -12,7 +12,7 @@ export default function Footer() {
 	const theme = useTheme();
 
 	return (
-		<Section background={theme.colors.dark} color={theme.colors.main}>
+		<S.FooterSection background={theme.colors.dark} color={theme.colors.main}>
 			<a name="contact" />
 			<S.Footer>
 				<S.Menu>
@@ -28,6 +28,8 @@ export default function Footer() {
 						<a href="#contact">Contato</a>
 					</S.Links>
 				</S.Menu>
+
+				<S.Divider order={1} />
 
 				<S.FeedbackForm id="feedback">
 					<h2>Feedback</h2>
@@ -62,6 +64,8 @@ export default function Footer() {
 
 					<Button title="Enviar Feedback" />
 				</S.FeedbackForm>
+
+				<S.Divider order={-1} />
 
 				<S.Contact>
 					<h3>Contato</h3>
@@ -130,6 +134,8 @@ export default function Footer() {
 						</S.SocialMedia>
 					</S.ContactInfo>
 				</S.Contact>
+
+				<S.Divider order={-1} />
 			</S.Footer>
 
 			<S.Rights>
@@ -150,6 +156,6 @@ export default function Footer() {
 					</a>
 				</p>
 			</S.Rights>
-		</Section>
+		</S.FooterSection>
 	);
 }

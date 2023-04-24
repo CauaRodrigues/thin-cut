@@ -1,4 +1,24 @@
 import styled from "styled-components";
+import Section from "@styled/Section";
+
+export const FooterSection = styled(Section)`
+	padding-bottom: 1rem;
+`;
+
+export const Divider = styled.div`
+	display: none;
+	height: 2px;
+	width: 95%;
+	background-color: ${({ theme }) => theme.colors.light};
+	align-self: center;
+	opacity: 0.2;
+
+	order: ${(props) => props.order};
+
+	@media (max-width: 800px) {
+		display: flex;
+	}
+`;
 
 export const Footer = styled.div`
 	width: 100%;
@@ -40,7 +60,7 @@ export const Links = styled.div`
 	a {
 		color: ${({ theme }) => theme.colors.main};
 		font-weight: ${({ theme }) => theme.fonts.fw.md};
-		font-size: min(1rem, 4vw);
+		font-size: min(1rem, 5vw);
 		transition: all 0.5s;
 
 		&:hover {
@@ -152,7 +172,7 @@ export const SocialMedia = styled.div`
 
 export const Rights = styled.div`
 	text-align: center;
-	font-size: min(0.9rem, 2.5vw);
+	font-size: min(0.9rem, 4vw);
 	color: ${({ theme }) => theme.colors.gray};
 	display: flex;
 	flex-direction: column;
