@@ -4,6 +4,11 @@ export const Footer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+	gap: 1.8rem;
+
+	@media (max-width: 800px) {
+		flex-direction: column;
+	}
 `;
 
 export const Menu = styled.nav`
@@ -12,6 +17,12 @@ export const Menu = styled.nav`
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
+
+	@media (max-width: 800px) {
+		flex-grow: 0;
+		flex-direction: row;
+		flex-direction: column;
+	}
 `;
 
 export const Links = styled.div`
@@ -19,10 +30,17 @@ export const Links = styled.div`
 	flex-direction: column;
 	gap: 0.3rem;
 
+	@media (max-width: 800px) {
+		flex-direction: column;
+		flex: 1;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	a {
 		color: ${({ theme }) => theme.colors.main};
 		font-weight: ${({ theme }) => theme.fonts.fw.md};
-		font-size: min(1rem, 2.3vw);
+		font-size: min(1rem, 4vw);
 		transition: all 0.5s;
 
 		&:hover {
@@ -40,17 +58,25 @@ export const FeedbackForm = styled.form`
 	align-items: center;
 	gap: 24px;
 
+	@media (max-width: 800px) {
+		order: -1;
+	}
+
 	h2 {
 		text-align: center;
 	}
 `;
 
 export const Field = styled.div`
-	width: 50%;
+	width: 70%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
+
+	@media (max-width: 882px) {
+		width: 90%;
+	}
 
 	label {
 		align-self: flex-start;
@@ -80,13 +106,15 @@ export const Field = styled.div`
 
 export const Contact = styled.div`
 	width: 25%;
-
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
 
-	h3 {
-		text-align: center;
+	@media (max-width: 800px) {
+		width: 100%;
+		order: -1;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 
@@ -101,6 +129,14 @@ export const ContactInfo = styled.div`
 
 	span {
 		margin-left: 8px;
+
+		@media (max-width: 800px) {
+			margin: 0;
+		}
+	}
+
+	@media (max-width: 800px) {
+		text-align: center;
 	}
 `;
 
@@ -108,6 +144,10 @@ export const SocialMedia = styled.div`
 	margin-left: 8px;
 	display: flex;
 	gap: 0.6rem;
+
+	@media (max-width: 800px) {
+		margin: 0;
+	}
 `;
 
 export const Rights = styled.div`
