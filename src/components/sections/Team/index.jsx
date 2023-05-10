@@ -12,7 +12,7 @@ export default function Team() {
 
 	return (
 		<Section>
-			<a name="team" />
+			<a id="team"></a>
 			<h2>Time</h2>
 
 			<h3>

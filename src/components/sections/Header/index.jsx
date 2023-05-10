@@ -5,6 +5,7 @@ import Button from "@components/Button";
 import Logo from "@components/Logo";
 
 import * as S from "./header.styled";
+import MenuMobile from "@components/MenuMobile";
 
 export default function Header() {
 	return (
@@ -21,6 +22,10 @@ export default function Header() {
 				</S.NavBox>
 
 				<Button title="Agendar Corte" />
+			</MediaQuery>
+
+			<MediaQuery maxWidth={699}>
+				<MenuMobile />
 			</MediaQuery>
 		</S.Header>
 	);
