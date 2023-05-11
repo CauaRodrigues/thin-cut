@@ -25,7 +25,7 @@ export const NavBox = styled.nav`
 		position: relative;
 		color: ${({ theme }) => theme.colors.light};
 		text-transform: capitalize;
-		font-size: min(1.1rem, 3vw);
+		font-size: min(1.1rem, 5vw);
 		font-weight: ${({ theme }) => theme.fonts.fw.md};
 		transition: 0.6s ease;
 
@@ -52,5 +52,35 @@ export const NavBox = styled.nav`
 			transform-origin: bottom left;
 			transform: scaleX(1);
 		}
+	}
+`;
+
+export const MenuMobile = styled.div`
+	width: 60%;
+	height: 80vh;
+	padding-top: 20%;
+
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(18px);
+`;
+
+export const NavBoxMobile = styled(NavBox)`
+	width: fit-content;
+	flex-direction: column;
+	gap: 1.5rem;
+	text-align: center;
+
+	a {
+		color: ${({ theme }) => theme.colors.light};
 	}
 `;

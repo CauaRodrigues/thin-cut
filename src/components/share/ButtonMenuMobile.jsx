@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-export default function MenuMobile() {
+export default function ButtonMenuMobile({ status }) {
 	const [openMenu, setOpenMenu] = useState(false);
+
+	useEffect(() => {
+		status(openMenu);
+	}, [openMenu]);
 
 	return (
 		<StyledButtonMenu
@@ -42,7 +46,7 @@ const StyledButtonMenu = styled.button`
 
 		background-color: ${({ theme }) => theme.colors.primary};
 		border-radius: 10px;
-		transition: all 0.3s linear;
+		transition: all 0.25s linear;
 		transform-origin: 1px;
 
 		&:first-child {
@@ -50,7 +54,7 @@ const StyledButtonMenu = styled.button`
 		}
 
 		&:nth-child(2) {
-			opacity: ${({ open }) => (open ? "0" : "1")};
+			visibility: ${({ open }) => (open ? "hidden" : "visible")};
 			transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
 		}
 
